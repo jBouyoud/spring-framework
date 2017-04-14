@@ -100,6 +100,7 @@ configure(allprojects) { project ->
 	ext.xmlunitVersion         = "2.3.0"
 	ext.xnioVersion            = "3.4.5.Final"
 	ext.xstreamVersion         = "1.4.9"
+	ext.supercsvVersion        = "2.4.0"
 
 	ext.gradleScriptDir = "${rootProject.projectDir}/gradle"
 
@@ -751,6 +752,7 @@ project("spring-web") {
 		optional("javax.xml.ws:jaxws-api:${jaxwsVersion}")
 		optional("javax.mail:javax.mail-api:${javamailVersion}")
 		optional("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
+		optional("net.sf.supercsv:super-csv:${supercsvVersion}")
 		testCompile(project(":spring-context-support"))  // for JafMediaTypeFactory
 		testCompile("io.projectreactor.addons:reactor-test")
 		testCompile("org.apache.taglibs:taglibs-standard-jstlel:1.2.1") {
@@ -769,6 +771,7 @@ project("spring-web") {
 		testCompile("com.squareup.okhttp3:mockwebserver:${okhttp3Version}")
 		testCompile("org.xmlunit:xmlunit-matchers:${xmlunitVersion}")
 		testCompile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+		testCompile("net.sf.supercsv:super-csv:${supercsvVersion}")
 		testRuntime("com.sun.mail:javax.mail:${javamailVersion}")
 		testRuntime("com.sun.xml.bind:jaxb-core:${jaxbVersion}")
 		testRuntime("com.sun.xml.bind:jaxb-impl:${jaxbVersion}")

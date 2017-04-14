@@ -291,6 +291,30 @@ public class MediaType extends MimeType implements Serializable {
 
 	private static final String PARAM_QUALITY_FACTOR = "q";
 
+	/**
+	 * Public constant media type for {@code text/csv}.
+	 * @since 5.0
+	 */
+	public static final MediaType TEXT_CSV;
+
+	/**
+	 * A String equivalent of {@link MediaType#TEXT_CSV}
+	 * @since 5.0
+	 */
+	public static final String TEXT_CSV_VALUE = "text/csv";
+
+	/**
+	 * Public constant media type for {@code text/csv} with utf-8 encoding
+	 * @since 5.0
+	 */
+	public static final MediaType TEXT_CSV_UTF8;
+
+	/**
+	 * A String equivalent of {@link MediaType#TEXT_CSV_UTF8}
+	 * @since 5.0
+	 */
+	public static final String TEXT_CSV_UTF8_VALUE = "text/csv;charset=utf-8";
+
 
 	static {
 		ALL = valueOf(ALL_VALUE);
@@ -315,6 +339,8 @@ public class MediaType extends MimeType implements Serializable {
 		TEXT_MARKDOWN = valueOf(TEXT_MARKDOWN_VALUE);
 		TEXT_PLAIN = valueOf(TEXT_PLAIN_VALUE);
 		TEXT_XML = valueOf(TEXT_XML_VALUE);
+		TEXT_CSV = valueOf(TEXT_CSV_VALUE);
+		TEXT_CSV_UTF8 = valueOf(TEXT_CSV_UTF8_VALUE);
 	}
 
 
